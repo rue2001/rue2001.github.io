@@ -228,6 +228,112 @@
     </div>
   </div>
 
+
+  <!-- Floating Contact Button -->
+<div class="contact-wrapper">
+
+  <div class="main-btn" title="Contact Me">☰</div>
+
+  <div class="contact-links">
+
+    <a href="https://wa.me/263772986901"
+       target="_blank"
+       class="contact-link whatsapp">
+      📱
+      <span class="tooltip">WhatsApp</span>
+    </a>
+
+    <a href="tel:+263772986901"
+       class="contact-link phone">
+      ☎️
+      <span class="tooltip">Call</span>
+    </a>
+
+    <a href="mailto:ruenyamugunduru@gmail.com"
+       class="contact-link email">
+      ✉️
+      <span class="tooltip">Email</span>
+    </a>
+
+  </div>
+</div>
+
+/* Floating contact button */
+.contact-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.main-btn {
+  width: 55px;
+  height: 55px;
+  background: #111827;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.contact-links {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.contact-wrapper:hover .contact-links {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.contact-link {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+.whatsapp { background: #25D366; }
+.phone { background: #2563eb; }
+.email { background: #dc2626; }
+
+.tooltip {
+  position: absolute;
+  right: 55px;
+  background: black;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.contact-link:hover .tooltip {
+  opacity: 1;
+}
+
+
+
+  
   <!-- View My CV Button -->
   <div style="font-family: 'Segoe UI', sans-serif;">
     <button onclick="window.open('CV.pdf', '_blank')" style="
